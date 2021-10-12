@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def welcome():
-    return "Welcome to the YT downloader"
+    return "Welcome to the YT downloader v1"
 
 @app.route('/download', methods=["POST"])
 def download_video():
