@@ -18,7 +18,11 @@ def download_video():
     link = request.get_json()
 
     try:
-        url = link.get('link', 'https://www.youtube.com/watch?v=23sp3cj5Pnc')
+        if link is None:
+            url = 'https://www.youtube.com/watch?v=23sp3cj5Pnc'
+        else:
+            url = link.get('link', 'https://www.youtube.com/watch?v=23sp3cj5Pnc')
+            
         yt = YouTube(url)
 
         #Title of video
