@@ -13,7 +13,7 @@ app = Flask(__name__)
 def welcome():
     return "Welcome to the YT downloader v1"
 
-@app.route('/download', methods=["POST"])
+@app.route('/download', methods=["POST", "GET"])
 def download_video():
     link = request.get_json()
 
