@@ -22,7 +22,7 @@ def download_video():
             url = 'https://www.youtube.com/watch?v=23sp3cj5Pnc'
         else:
             url = link.get('link', 'https://www.youtube.com/watch?v=23sp3cj5Pnc')
-            
+
         yt = YouTube(url)
 
         #Title of video
@@ -39,7 +39,7 @@ def download_video():
         # audio_stream = ffmpeg.input('audio.mp4')
         # ffmpeg.concat(video_stream, audio_stream, v=1, a=1).output('inished_video.mp4').run()
         print("Download completed!!")
-        return send_from_directory('/Users/harsh/Documents/python', 'video.mp4', as_attachment=True)
+        return ys
     except Exception as e:
         return str(e)
 
